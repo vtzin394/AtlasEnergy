@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1d2631;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Cadastrar usuario</h2>
+    <form id="cadastroForm">
+        <input type="text" id="username" name="username" placeholder="Nome de Usuário" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Senha" required>
+        <input type="password" id="password" name="password" placeholder="confirme a senha" required>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <input type="submit" value="Cadastrar">
+    </form>
+</div>
+
+<script>
+    document.getElementById("cadastroForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Evitar o envio do formulário
+
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var birthdate = document.getElementById("birthdate").value;
+
+        // Dados de usuario
+        console.log("Nome de Usuário: " + username);
+        console.log("Email: " + email);
+        console.log("Senha: " + password);
+        console.log("Data de Nascimento: " + birthdate);
+        window.alert('usuario cadastrado com sucesso');
+
+        // aqui limpa os dados apos cadastro
+        document.getElementById("username").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("birthdate").value = "";
+    });
+</script>
+
+</body>
+</html>

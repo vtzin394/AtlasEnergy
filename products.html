@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://telegra.ph/file/54ce0946b3a74b4a62445.jpg">
+    <title>AtlasEnergy</title>
+
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-basket'></i>Nossos Produtos</a>
+    </header>
+
+    <div class="produtos">
+        <div class="produto1">
+            <li><img src="https://telegra.ph/file/383bfb91371fdc3e42e0d.png" onclick="slider('https://telegra.ph/file/383bfb91371fdc3e42e0d.png')"></li>
+        </div><!--produto1-->
+
+        <div class="produto2">
+            <li><img src="https://telegra.ph/file/4925eece0be5c558418e2.png" onclick="slider('https://telegra.ph/file/4925eece0be5c558418e2.png')"></li>
+        </div><!--produto2-->
+
+        <div class="produto3">
+            <li><img src="https://telegra.ph/file/c6335e655d766c510062a.png" onclick="slider('https://telegra.ph/file/c6335e655d766c510062a.png')"></li>
+        </div><!--produto3-->
+    </div><!--produtos-->
+
+    <div class="products-container">
+        <div class="product" id="product1">
+            <h3>Produto 1</h3>
+            <p>Preço: R$ 50,00</p>
+            <button class="add-to-cart" onclick="addToCart('Produto 1', 50)">Adicionar ao Carrinho</button>
+        </div>
+      
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d2631;
+            padding: 20px;
+        }
+    
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+    
+        .product h3 {
+            margin-top: 0;
+        }
+    
+        .product p {
+            margin-bottom: 10px;
+        }
+    
+        .add-to-cart {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+    
+        .cart-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    
+        .remove-item {
+            color: #ff3333;
+            cursor: pointer;
+        }
+    </style>
+
+</body>
+</html>
